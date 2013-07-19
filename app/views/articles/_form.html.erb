@@ -1,4 +1,4 @@
-<%= form_for [@article, @comment] do |f| %>
+<%= form_for @article do |f| %>
   <ul>
   <% @article.errors.full_messages.each do |error| %>
     <li><%= error %></li>
@@ -15,4 +15,9 @@
   <p>
     <%= f.submit %>
   </p>
+  <p>
+    <%= f.label :tag_list %><br />
+    <%= f.text_field :tag_list %>
+  </p>
+
 <% end %>
